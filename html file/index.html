@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Simon Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="heading">THE SIMON GAME</div>
+    <div class="container">
+        <div class="topLeft"></div>
+        <div class="topRight"></div>
+        <div class="bottomLeft"></div>
+        <div class="bottomRight"></div>
+        <div class="innerCircle">
+            <div class="font-effect-emboss" id="name">SIMON!</div>
+            <div class="switch">
+                <input type="checkbox" class="toggle" id="power">
+                <button class="start">Start</button>
+                <input type="checkbox" class="toggle" id="strict">
+            </div>
+            <div class="row1">
+                <span>POWER</span><span>STRICT</span>
+            </div>
+            <div class="turn"></div>
+            <div class="row2">COUNT</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
