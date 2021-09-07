@@ -84,3 +84,61 @@ button {
   border-radius: 100%;
   box-shadow: 6px 6px 35px 6px #888888;
 }
+
+.topLeft {
+  position: absolute;
+  height: 15.5em;
+  width: 15.5em;
+  border-radius: 100% 0 0 0;
+  background-color: green;
+  border: 6px solid black;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+
+.topRight {
+  position: absolute;
+  height: 15.5em;
+  width: 15.5em;
+  border-radius: 0 100% 0 0;
+  background-color: darkred;
+  margin-left: 15.5em;
+  border: 6px solid black;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+
+.bottomLeft {
+  position: absolute;
+  height: 15.5em;
+  width: 15.5em;
+  border-radius: 0 0 0 100%;
+  background-color: rgb(188, 190, 17);
+  margin-top: 15.5em;
+  border: 6px solid black;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+
+.bottomRight {
+  position: absolute;
+  height: 15.5em;
+  width: 15.5em;
+  border-radius: 0 0 100% 0;
+  margin: 15.5em 0em 0em 15.5em;
+  border: 6px solid black;
+  box-sizing: border-box;
+}
+
+.innerCircle {
+  position: absolute;
+  background: #888888;
+  border-radius: 50%;
+  height: 15.5em;
+  width: 15.5em;
+  border: 10px solid black;
+  top: 50%;
+  left: 50%;
+  margin: -7.4em 0em 0em -7.4em;
+  box-sizing: border-box;
+}
