@@ -149,3 +149,96 @@ let flashColor = () => {
   bottomLeft.css("background-color", "yellow");
   bottomRight.css("background-color", "lightskyblue");
 };
+
+topLeft.click((event) => {
+  if (on) {
+    playerOrder.push(1);
+    check();
+    one();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
+topRight.click((event) => {
+  if (on) {
+    playerOrder.push(2);
+    check();
+    two();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
+bottomLeft.click((event) => {
+  if (on) {
+    playerOrder.push(3);
+    check();
+    three();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
+bottomRight.click((event) => {
+  if (on) {
+    playerOrder.push(4);
+    check();
+    four();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
+let check = () => {
+  if (playerOrder[playerOrder.length - 1] !== compOrder[playerOrder.length - 1])
+    good = false;
+  if (playerOrder.length == 30 && good) winGame();
+  if (good == false) {
+    flashColor();
+    turnCounter.html("WRONG!");
+    wrong();
+    setTimeout(() => {
+      turnCounter.html(playerTurn);
+      clearColor();
+      if (isStrict) {
+        play();
+      } else {
+        compTurn = true;
+        flash = 0;
+        playerOrder = [];
+        good = true;
+        intervalId = setInterval(gameTurn, 800);
+      }
+    }, 800);
+    noise = false;
+  }
+  if (playerTurn == playerOrder.length && good && !win) {
+    playerTurn++;
+    playerOrder = [];
+    compTurn = true;
+    flash = 0;
+    turnCounter.html(playerTurn);
+    intervalId = setInterval(gameTurn, 800);
+  }
+};
+
+let winGame = () => {
+  flashColor();
+  turnCounter.html("WIN!");
+  on = false;
+  win = true;
+  heading.html("YOU WON THE GAME!!")
+};
