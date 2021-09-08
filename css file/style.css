@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+body {
+  background-image: radial-gradient(rgb(98, 117, 196), rgb(0, 0, 0));
+}
+
 .heading {
   font-size: 600%;
   text-align: center;
